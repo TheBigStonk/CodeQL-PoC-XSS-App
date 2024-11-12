@@ -4,6 +4,7 @@ import './SpaceyTextForm.css';
 const SpaceyTextForm = () => {
   const [inputText, setInputText] = useState('');
   const [spaceyText, setSpaceyText] = useState('');
+  var unused = "meow";
 
   const handleSubmit = (e) => {
     e.preventDefault();

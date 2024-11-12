@@ -1,0 +1,11 @@
+---
+sourceLocationPrefix: /Users/haze/Code/crazy-texty/CodeQL-PoC-XSS-App
+baselineLinesOfCode: 189
+unicodeNewlines: true
+columnKind: utf16
+primaryLanguage: javascript
+creationMetadata:
+  sha: 9fbe100eeede9606973f3a240b4e6ad2d3798259
+  cliVersion: 2.19.3
+  creationTime: 2024-11-12T04:03:58.648925Z
+finalised: true
