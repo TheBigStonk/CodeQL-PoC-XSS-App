@@ -1,0 +1,1 @@
+"Use of the dangerouslySetInnerHTML property within an application","Without justification dangerouslySetInnerHTML can be abused to inject javascript and enabled reflected XSS","recommendation","Avoid using dangerouslySetInnerHTML as it can lead to XSS vulnerabilities.","/src/components/LowerCaseTextForm/LowerCaseTextForm.js","28","11","28","61"

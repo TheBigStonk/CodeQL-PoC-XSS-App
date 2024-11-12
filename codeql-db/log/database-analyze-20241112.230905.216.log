@@ -1,0 +1,24 @@
+[2024-11-12 23:09:05] This is codeql database analyze --download codeql-db codeql/javascript-queries:Declarations/UnusedVariable.ql --format=csv --output=js-results.csv --rerun
+[2024-11-12 23:09:05] Log file was started late.
+[2024-11-12 23:09:05] [DETAILS] database analyze> Downloading queries...
+[2024-11-12 23:09:05] Running plumbing command: codeql pack download --format json --qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/qlconfig.yml -- codeql/javascript-queries:Declarations/UnusedVariable.ql
+[2024-11-12 23:09:05] [PROGRESS] pack download> Package specifications to check for download: codeql/javascript-queries:Declarations/UnusedVariable.ql
+[2024-11-12 23:09:05] Calling plumbing command: codeql resolve queries --qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/qlconfig.yml --format installedpacks codeql/javascript-queries:Declarations/UnusedVariable.ql
+[2024-11-12 23:09:05] [PROGRESS] resolve queries> Recording pack reference codeql/javascript-queries at /Users/haze/Code/codeql/qlpacks/codeql/javascript-queries/1.2.3.
+[2024-11-12 23:09:05] Plumbing command codeql resolve queries completed:
+                      {
+                        "installedPacks" : [ ]
+                      }
+[2024-11-12 23:09:05] [PROGRESS] pack download> Did not need to download any packs.
+[2024-11-12 23:09:05] Plumbing command codeql pack download completed.
+[2024-11-12 23:09:05] [PROGRESS] database analyze> Running queries.
+[2024-11-12 23:09:05] Running plumbing command: codeql database run-queries --evaluator-log-level=5 --warnings=show --dynamic-join-order-mode=none --qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/qlconfig.yml --rerun --interpret-passthrough=null,--format=csv,-o=/Users/haze/Code/CodeQL-PoC-XSS-App/js-results.csv,--max-paths=4,--csv-location-format=line-column,--print-diagnostics-summary,--print-metrics-summary,--qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/qlconfig.yml,--,/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db,codeql/javascript-queries:Declarations/UnusedVariable.ql -- /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db codeql/javascript-queries:Declarations/UnusedVariable.ql
+[2024-11-12 23:09:05] Calling plumbing command: codeql resolve ram --dataset=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db/db-javascript --format=json
+[2024-11-12 23:09:05] [PROGRESS] resolve ram> Stringpool size measured as 5013930
+[2024-11-12 23:09:05] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx1402M"
+                      ]
+[2024-11-12 23:09:06] Chaining via /var/folders/d_/ln6psd1j5j93cstnw_rzz8rh0000gn/T/codeql.XXXXXXXX.uFrzLcOV to plumbing: execute queries -J-Xmx1402M --verbosity=progress --logdir=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db/log --evaluator-log-level=5 --warnings=show --dynamic-join-order-mode=none --qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/qlconfig.yml --rerun --interpret-passthrough=null,--format=csv,-o=/Users/haze/Code/CodeQL-PoC-XSS-App/js-results.csv,--max-paths=4,--csv-location-format=line-column,--print-diagnostics-summary,--print-metrics-summary,--qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/qlconfig.yml,--,/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db,codeql/javascript-queries:Declarations/UnusedVariable.ql --output=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db/results -- /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db/db-javascript codeql/javascript-queries:Declarations/UnusedVariable.ql
+[2024-11-12 23:09:06] Plumbing command codeql database run-queries completed with status 70.
+[2024-11-12 23:09:06] Exiting with code 70

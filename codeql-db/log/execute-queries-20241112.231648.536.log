@@ -1,0 +1,2347 @@
+[2024-11-12 23:16:48] This is codeql execute queries -J-Xmx1402M --verbosity=progress --logdir=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db/log --evaluator-log-level=5 --warnings=show --dynamic-join-order-mode=none --qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/qlconfig.yml --rerun --interpret-passthrough=null,--format=csv,-o=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/js-results.csv,--max-paths=4,--csv-location-format=line-column,--print-diagnostics-summary,--print-metrics-summary,--qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/qlconfig.yml,--,/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db,example.ql --output=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db/results -- /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db/db-javascript example.ql
+[2024-11-12 23:16:48] Calling plumbing command: codeql resolve queries --qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/qlconfig.yml --format=json -- example.ql
+[2024-11-12 23:16:49] [PROGRESS] resolve queries> Recording pack reference getting-started/codeql-extra-queries-javascript at /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript.
+[2024-11-12 23:16:49] Plumbing command codeql resolve queries completed:
+                      [
+                        "/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/example.ql"
+                      ]
+[2024-11-12 23:16:49] Creating executor with 1 threads.
+[2024-11-12 23:16:49] Calling plumbing command: codeql resolve extensions --qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/qlconfig.yml --include-extension-row-locations example.ql
+[2024-11-12 23:16:49] Calling plumbing command: codeql resolve queries --qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/qlconfig.yml --allow-library-packs --format startingpacks -- example.ql
+[2024-11-12 23:16:49] [PROGRESS] resolve queries> Recording pack reference getting-started/codeql-extra-queries-javascript at /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript.
+[2024-11-12 23:16:49] Plumbing command codeql resolve queries completed:
+                      [
+                        "/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript"
+                      ]
+[2024-11-12 23:16:49] Calling plumbing command: codeql resolve extensions-by-pack --qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/qlconfig.yml --include-extension-row-locations -- /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript
+[2024-11-12 23:16:49] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] getting-started/codeql-extra-queries-javascript: not 1.0.0 {root: getting-started/codeql-extra-queries-javascript@1.0.0}
+[2024-11-12 23:16:49] [SPAMMY] resolve extensions-by-pack> [DERIVATION] getting-started/codeql-extra-queries-javascript: 1.0.0 {getting-started/codeql-extra-queries-javascript: not 1.0.0 {root: getting-started/codeql-extra-queries-javascript@1.0.0}}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] getting-started/codeql-extra-queries-javascript: * [*], codeql/javascript-all: not * [*] {dependency: getting-started/codeql-extra-queries-javascript@* [*] requires codeql/javascript-all@^2.1.0}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DECISION 1] getting-started/codeql-extra-queries-javascript: 1.0.0
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/javascript-all: * [*] {getting-started/codeql-extra-queries-javascript: * [*], codeql/javascript-all: not * [*] {dependency: getting-started/codeql-extra-queries-javascript@* [*] requires codeql/javascript-all@^2.1.0}}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/dataflow: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/dataflow@1.1.5}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/mad: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/mad@1.0.11}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/regex: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/regex@1.0.11}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/threat-models: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/threat-models@1.0.11}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/tutorial: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/tutorial@1.0.11}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/util: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/xml: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/xml@1.0.11}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/yaml: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/yaml@1.0.11}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DECISION 2] codeql/javascript-all: 2.1.0
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/yaml: * [*] {codeql/javascript-all: * [*], codeql/yaml: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/yaml@1.0.11}}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/xml: * [*] {codeql/javascript-all: * [*], codeql/xml: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/xml@1.0.11}}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/util: * [*] {codeql/javascript-all: * [*], codeql/util: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/util@1.0.11}}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/tutorial: * [*] {codeql/javascript-all: * [*], codeql/tutorial: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/tutorial@1.0.11}}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/threat-models: * [*] {codeql/javascript-all: * [*], codeql/threat-models: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/threat-models@1.0.11}}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/regex: * [*] {codeql/javascript-all: * [*], codeql/regex: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/regex@1.0.11}}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/mad: * [*] {codeql/javascript-all: * [*], codeql/mad: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/mad@1.0.11}}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/dataflow: * [*] {codeql/javascript-all: * [*], codeql/dataflow: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/dataflow@1.1.5}}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/ssa: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/ssa@1.0.11}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/typetracking: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/typetracking@1.0.11}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/util: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DECISION 3] codeql/dataflow: 1.1.5
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/typetracking: * [*] {codeql/dataflow: * [*], codeql/typetracking: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/typetracking@1.0.11}}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/ssa: * [*] {codeql/dataflow: * [*], codeql/ssa: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/ssa@1.0.11}}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/mad: * [*], codeql/dataflow: not * [*] {dependency: codeql/mad@* [*] requires codeql/dataflow@1.1.5}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/mad: * [*], codeql/util: not * [*] {dependency: codeql/mad@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DECISION 4] codeql/mad: 1.0.11
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/regex: * [*], codeql/util: not * [*] {dependency: codeql/regex@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DECISION 5] codeql/regex: 1.0.11
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/ssa: * [*], codeql/util: not * [*] {dependency: codeql/ssa@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DECISION 6] codeql/ssa: 1.0.11
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DECISION 7] codeql/threat-models: 1.0.11
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DECISION 8] codeql/tutorial: 1.0.11
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/typetracking: * [*], codeql/util: not * [*] {dependency: codeql/typetracking@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DECISION 9] codeql/typetracking: 1.0.11
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DECISION 10] codeql/util: 1.0.11
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/xml: * [*], codeql/util: not * [*] {dependency: codeql/xml@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DECISION 11] codeql/xml: 1.0.11
+[2024-11-12 23:16:50] [SPAMMY] resolve extensions-by-pack> [DECISION 12] codeql/yaml: 1.0.11
+[2024-11-12 23:16:50] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/ext/default-threat-models-fixup.model.yml.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/threat-models:threatModelConfiguration: 1 tuples.
+[2024-11-12 23:16:50] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/NoSQL.model.yml.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeModel: 4 tuples.
+[2024-11-12 23:16:50] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/NodeJSLib.model.yml.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:sourceModel: 5 tuples.
+[2024-11-12 23:16:50] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/SQL.model.yml.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:sourceModel: 5 tuples.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:sinkModel: 4 tuples.
+[2024-11-12 23:16:50] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:sourceModel: 0 tuples.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:sinkModel: 0 tuples.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:summaryModel: 0 tuples.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:neutralModel: 0 tuples.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeModel: 0 tuples.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeVariableModel: 0 tuples.
+[2024-11-12 23:16:50] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/helmet/Helmet.Required.Setting.model.yml.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:requiredHelmetSecuritySetting: 2 tuples.
+[2024-11-12 23:16:50] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/minimongo/model.yml.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeModel: 75 tuples.
+[2024-11-12 23:16:50] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mongodb/model.yml.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:sinkModel: 26 tuples.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeModel: 611 tuples.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:summaryModel: 32 tuples.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeVariableModel: 102 tuples.
+[2024-11-12 23:16:50] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mssql/model.yml.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeModel: 34 tuples.
+[2024-11-12 23:16:50] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mysql/model.yml.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeModel: 57 tuples.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:summaryModel: 3 tuples.
+[2024-11-12 23:16:50] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/pg/model.yml.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeModel: 65 tuples.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:summaryModel: 5 tuples.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeVariableModel: 23 tuples.
+[2024-11-12 23:16:50] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sequelize/model.yml.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:sinkModel: 7 tuples.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeModel: 248 tuples.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:summaryModel: 5 tuples.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeVariableModel: 2 tuples.
+[2024-11-12 23:16:50] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/spanner/model.yml.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeModel: 174 tuples.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeVariableModel: 5 tuples.
+[2024-11-12 23:16:50] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sqlite3/model.yml.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeModel: 15 tuples.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:summaryModel: 3 tuples.
+[2024-11-12 23:16:50] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/security/domains/IntegrityCheckingRequired/integrity_checking_required.model.yml.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:isCdnDomainWithCheckingRequired: 3 tuples.
+[2024-11-12 23:16:50] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/security/domains/compromised/compromised_domains.model.yml.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:isUntrustedDomain: 1 tuples.
+[2024-11-12 23:16:50] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/security/domains/untrusted/untrusted_domains.model.yml.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:isUntrustedDomain: 6 tuples.
+[2024-11-12 23:16:50] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/threat-models/1.0.11/ext/supported-threat-models.model.yml.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/threat-models:threatModelConfiguration: 1 tuples.
+[2024-11-12 23:16:50] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/threat-models/1.0.11/ext/threat-model-grouping.model.yml.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/threat-models:threatModelGrouping: 14 tuples.
+[2024-11-12 23:16:50] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/util/1.0.11/ext/default-alert-filter.yml.
+[2024-11-12 23:16:50] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/util:restrictAlertsTo: 0 tuples.
+[2024-11-12 23:16:50] Plumbing command codeql resolve extensions-by-pack completed:
+                      {
+                        "models" : [ ],
+                        "data" : {
+                          "/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript" : [
+                            {
+                              "predicate" : "threatModelConfiguration",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/ext/default-threat-models-fixup.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 0,
+                              "rowCount" : 1,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=8",
+                                "columnNumbers" : "A=9"
+                              }
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/NoSQL.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1,
+                              "rowCount" : 4,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=8+3+1*2",
+                                "columnNumbers" : "A=9*4"
+                              }
+                            },
+                            {
+                              "predicate" : "sourceModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/NodeJSLib.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 5,
+                              "rowCount" : 5,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*4",
+                                "columnNumbers" : "A=9*5"
+                              }
+                            },
+                            {
+                              "predicate" : "sourceModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/SQL.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 10,
+                              "rowCount" : 5,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*4",
+                                "columnNumbers" : "A=9*5"
+                              }
+                            },
+                            {
+                              "predicate" : "sinkModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/SQL.model.yml",
+                              "index" : 1,
+                              "firstRowId" : 15,
+                              "rowCount" : 4,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A=16+1*3",
+                                "columnNumbers" : "A=9*4"
+                              }
+                            },
+                            {
+                              "predicate" : "sourceModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A",
+                                "columnNumbers" : "A"
+                              }
+                            },
+                            {
+                              "predicate" : "sinkModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 1,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A",
+                                "columnNumbers" : "A"
+                              }
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 2,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A",
+                                "columnNumbers" : "A"
+                              }
+                            },
+                            {
+                              "predicate" : "neutralModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 3,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A",
+                                "columnNumbers" : "A"
+                              }
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 4,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A",
+                                "columnNumbers" : "A"
+                              }
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 5,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A",
+                                "columnNumbers" : "A"
+                              }
+                            },
+                            {
+                              "predicate" : "requiredHelmetSecuritySetting",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/helmet/Helmet.Required.Setting.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 19,
+                              "rowCount" : 2,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1",
+                                "columnNumbers" : "A=9*2"
+                              }
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/minimongo/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 21,
+                              "rowCount" : 75,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*74",
+                                "columnNumbers" : "A=9*75"
+                              }
+                            },
+                            {
+                              "predicate" : "sinkModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mongodb/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 96,
+                              "rowCount" : 26,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*25",
+                                "columnNumbers" : "A=9*26"
+                              }
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mongodb/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 122,
+                              "rowCount" : 611,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=37+1*610",
+                                "columnNumbers" : "A=9*611"
+                              }
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mongodb/model.yml",
+                              "index" : 2,
+                              "firstRowId" : 733,
+                              "rowCount" : 32,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A=653+1*31",
+                                "columnNumbers" : "A=9*32"
+                              }
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mongodb/model.yml",
+                              "index" : 3,
+                              "firstRowId" : 765,
+                              "rowCount" : 102,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=690+1*101",
+                                "columnNumbers" : "A=9*102"
+                              }
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mssql/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 867,
+                              "rowCount" : 34,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*33",
+                                "columnNumbers" : "A=9*34"
+                              }
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mysql/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 901,
+                              "rowCount" : 57,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*56",
+                                "columnNumbers" : "A=9*57"
+                              }
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mysql/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 958,
+                              "rowCount" : 3,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A=68+1*2",
+                                "columnNumbers" : "A=9*3"
+                              }
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/pg/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 961,
+                              "rowCount" : 65,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*64",
+                                "columnNumbers" : "A=9*65"
+                              }
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/pg/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 1026,
+                              "rowCount" : 5,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A=76+1*4",
+                                "columnNumbers" : "A=9*5"
+                              }
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/pg/model.yml",
+                              "index" : 2,
+                              "firstRowId" : 1031,
+                              "rowCount" : 23,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=86+1*22",
+                                "columnNumbers" : "A=9*23"
+                              }
+                            },
+                            {
+                              "predicate" : "sinkModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sequelize/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1054,
+                              "rowCount" : 7,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*6",
+                                "columnNumbers" : "A=9*7"
+                              }
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sequelize/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 1061,
+                              "rowCount" : 248,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=18+1*247",
+                                "columnNumbers" : "A=9*248"
+                              }
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sequelize/model.yml",
+                              "index" : 2,
+                              "firstRowId" : 1309,
+                              "rowCount" : 5,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A=271+1*4",
+                                "columnNumbers" : "A=9*5"
+                              }
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sequelize/model.yml",
+                              "index" : 3,
+                              "firstRowId" : 1314,
+                              "rowCount" : 2,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=281+1",
+                                "columnNumbers" : "A=9*2"
+                              }
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/spanner/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1316,
+                              "rowCount" : 174,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*173",
+                                "columnNumbers" : "A=9*174"
+                              }
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/spanner/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 1490,
+                              "rowCount" : 5,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=185+1*4",
+                                "columnNumbers" : "A=9*5"
+                              }
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sqlite3/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1495,
+                              "rowCount" : 15,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*14",
+                                "columnNumbers" : "A=9*15"
+                              }
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sqlite3/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 1510,
+                              "rowCount" : 3,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A=26+1*2",
+                                "columnNumbers" : "A=9*3"
+                              }
+                            },
+                            {
+                              "predicate" : "isCdnDomainWithCheckingRequired",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/security/domains/IntegrityCheckingRequired/integrity_checking_required.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1513,
+                              "rowCount" : 3,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*2",
+                                "columnNumbers" : "A=9*3"
+                              }
+                            },
+                            {
+                              "predicate" : "isUntrustedDomain",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/security/domains/compromised/compromised_domains.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1516,
+                              "rowCount" : 1,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=6",
+                                "columnNumbers" : "A=9"
+                              }
+                            },
+                            {
+                              "predicate" : "isUntrustedDomain",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/security/domains/untrusted/untrusted_domains.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1517,
+                              "rowCount" : 6,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=7+1+3+1*3",
+                                "columnNumbers" : "A=9*6"
+                              }
+                            },
+                            {
+                              "predicate" : "threatModelConfiguration",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/threat-models/1.0.11/ext/supported-threat-models.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1523,
+                              "rowCount" : 1,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=6",
+                                "columnNumbers" : "A=9"
+                              }
+                            },
+                            {
+                              "predicate" : "threatModelGrouping",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/threat-models/1.0.11/ext/threat-model-grouping.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1524,
+                              "rowCount" : 14,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=8+3+1+3+1*5+3+1+5+1*2",
+                                "columnNumbers" : "A=9*14"
+                              }
+                            },
+                            {
+                              "predicate" : "restrictAlertsTo",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/util/1.0.11/ext/default-alert-filter.yml",
+                              "index" : 0,
+                              "firstRowId" : 1538,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A",
+                                "columnNumbers" : "A"
+                              }
+                            }
+                          ]
+                        },
+                        "threatModels" : {
+                          "/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript" : {
+                            "extensions" : [
+                              {
+                                "data" : [ ],
+                                "addsTo" : {
+                                  "extensible" : "threatModelConfiguration",
+                                  "packName" : "codeql/threat-models"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "extensionPacks" : [ ]
+                      }
+[2024-11-12 23:16:50] Plumbing command codeql resolve extensions completed:
+                      {
+                        "models" : [ ],
+                        "data" : {
+                          "/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript" : [
+                            {
+                              "predicate" : "threatModelConfiguration",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/ext/default-threat-models-fixup.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 0,
+                              "rowCount" : 1,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=8",
+                                "columnNumbers" : "A=9"
+                              }
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/NoSQL.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1,
+                              "rowCount" : 4,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=8+3+1*2",
+                                "columnNumbers" : "A=9*4"
+                              }
+                            },
+                            {
+                              "predicate" : "sourceModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/NodeJSLib.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 5,
+                              "rowCount" : 5,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*4",
+                                "columnNumbers" : "A=9*5"
+                              }
+                            },
+                            {
+                              "predicate" : "sourceModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/SQL.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 10,
+                              "rowCount" : 5,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*4",
+                                "columnNumbers" : "A=9*5"
+                              }
+                            },
+                            {
+                              "predicate" : "sinkModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/SQL.model.yml",
+                              "index" : 1,
+                              "firstRowId" : 15,
+                              "rowCount" : 4,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A=16+1*3",
+                                "columnNumbers" : "A=9*4"
+                              }
+                            },
+                            {
+                              "predicate" : "sourceModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A",
+                                "columnNumbers" : "A"
+                              }
+                            },
+                            {
+                              "predicate" : "sinkModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 1,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A",
+                                "columnNumbers" : "A"
+                              }
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 2,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A",
+                                "columnNumbers" : "A"
+                              }
+                            },
+                            {
+                              "predicate" : "neutralModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 3,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A",
+                                "columnNumbers" : "A"
+                              }
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 4,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A",
+                                "columnNumbers" : "A"
+                              }
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 5,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A",
+                                "columnNumbers" : "A"
+                              }
+                            },
+                            {
+                              "predicate" : "requiredHelmetSecuritySetting",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/helmet/Helmet.Required.Setting.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 19,
+                              "rowCount" : 2,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1",
+                                "columnNumbers" : "A=9*2"
+                              }
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/minimongo/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 21,
+                              "rowCount" : 75,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*74",
+                                "columnNumbers" : "A=9*75"
+                              }
+                            },
+                            {
+                              "predicate" : "sinkModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mongodb/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 96,
+                              "rowCount" : 26,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*25",
+                                "columnNumbers" : "A=9*26"
+                              }
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mongodb/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 122,
+                              "rowCount" : 611,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=37+1*610",
+                                "columnNumbers" : "A=9*611"
+                              }
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mongodb/model.yml",
+                              "index" : 2,
+                              "firstRowId" : 733,
+                              "rowCount" : 32,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A=653+1*31",
+                                "columnNumbers" : "A=9*32"
+                              }
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mongodb/model.yml",
+                              "index" : 3,
+                              "firstRowId" : 765,
+                              "rowCount" : 102,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=690+1*101",
+                                "columnNumbers" : "A=9*102"
+                              }
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mssql/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 867,
+                              "rowCount" : 34,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*33",
+                                "columnNumbers" : "A=9*34"
+                              }
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mysql/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 901,
+                              "rowCount" : 57,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*56",
+                                "columnNumbers" : "A=9*57"
+                              }
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mysql/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 958,
+                              "rowCount" : 3,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A=68+1*2",
+                                "columnNumbers" : "A=9*3"
+                              }
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/pg/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 961,
+                              "rowCount" : 65,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*64",
+                                "columnNumbers" : "A=9*65"
+                              }
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/pg/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 1026,
+                              "rowCount" : 5,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A=76+1*4",
+                                "columnNumbers" : "A=9*5"
+                              }
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/pg/model.yml",
+                              "index" : 2,
+                              "firstRowId" : 1031,
+                              "rowCount" : 23,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=86+1*22",
+                                "columnNumbers" : "A=9*23"
+                              }
+                            },
+                            {
+                              "predicate" : "sinkModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sequelize/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1054,
+                              "rowCount" : 7,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*6",
+                                "columnNumbers" : "A=9*7"
+                              }
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sequelize/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 1061,
+                              "rowCount" : 248,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=18+1*247",
+                                "columnNumbers" : "A=9*248"
+                              }
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sequelize/model.yml",
+                              "index" : 2,
+                              "firstRowId" : 1309,
+                              "rowCount" : 5,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A=271+1*4",
+                                "columnNumbers" : "A=9*5"
+                              }
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sequelize/model.yml",
+                              "index" : 3,
+                              "firstRowId" : 1314,
+                              "rowCount" : 2,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=281+1",
+                                "columnNumbers" : "A=9*2"
+                              }
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/spanner/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1316,
+                              "rowCount" : 174,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*173",
+                                "columnNumbers" : "A=9*174"
+                              }
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/spanner/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 1490,
+                              "rowCount" : 5,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=185+1*4",
+                                "columnNumbers" : "A=9*5"
+                              }
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sqlite3/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1495,
+                              "rowCount" : 15,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*14",
+                                "columnNumbers" : "A=9*15"
+                              }
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sqlite3/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 1510,
+                              "rowCount" : 3,
+                              "predicateHasOrigin" : true,
+                              "locations" : {
+                                "lineNumbers" : "A=26+1*2",
+                                "columnNumbers" : "A=9*3"
+                              }
+                            },
+                            {
+                              "predicate" : "isCdnDomainWithCheckingRequired",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/security/domains/IntegrityCheckingRequired/integrity_checking_required.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1513,
+                              "rowCount" : 3,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=6+1*2",
+                                "columnNumbers" : "A=9*3"
+                              }
+                            },
+                            {
+                              "predicate" : "isUntrustedDomain",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/security/domains/compromised/compromised_domains.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1516,
+                              "rowCount" : 1,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=6",
+                                "columnNumbers" : "A=9"
+                              }
+                            },
+                            {
+                              "predicate" : "isUntrustedDomain",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/security/domains/untrusted/untrusted_domains.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1517,
+                              "rowCount" : 6,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=7+1+3+1*3",
+                                "columnNumbers" : "A=9*6"
+                              }
+                            },
+                            {
+                              "predicate" : "threatModelConfiguration",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/threat-models/1.0.11/ext/supported-threat-models.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1523,
+                              "rowCount" : 1,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=6",
+                                "columnNumbers" : "A=9"
+                              }
+                            },
+                            {
+                              "predicate" : "threatModelGrouping",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/threat-models/1.0.11/ext/threat-model-grouping.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1524,
+                              "rowCount" : 14,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A=8+3+1+3+1*5+3+1+5+1*2",
+                                "columnNumbers" : "A=9*14"
+                              }
+                            },
+                            {
+                              "predicate" : "restrictAlertsTo",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/util/1.0.11/ext/default-alert-filter.yml",
+                              "index" : 0,
+                              "firstRowId" : 1538,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false,
+                              "locations" : {
+                                "lineNumbers" : "A",
+                                "columnNumbers" : "A"
+                              }
+                            }
+                          ]
+                        },
+                        "threatModels" : {
+                          "/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript" : {
+                            "extensions" : [
+                              {
+                                "data" : [ ],
+                                "addsTo" : {
+                                  "extensible" : "threatModelConfiguration",
+                                  "packName" : "codeql/threat-models"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "extensionPacks" : [ ]
+                      }
+[2024-11-12 23:16:52] Calling plumbing command: codeql resolve library-path --qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/qlconfig.yml --query=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/example.ql --format=json
+[2024-11-12 23:16:52] [DETAILS] resolve library-path> Resolving query at normalized path /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/example.ql.
+[2024-11-12 23:16:52] [DETAILS] resolve library-path> Found enclosing pack 'getting-started/codeql-extra-queries-javascript' at /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript.
+[2024-11-12 23:16:52] [DETAILS] resolve library-path> Adding compilation cache at /Users/haze/.codeql/compile-cache.
+[2024-11-12 23:16:52] [DETAILS] resolve library-path> Resolving library dependencies from /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/codeql-pack.yml.
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [INCOMPATIBILITY] getting-started/codeql-extra-queries-javascript: not 1.0.0 {root: getting-started/codeql-extra-queries-javascript@1.0.0}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DERIVATION] getting-started/codeql-extra-queries-javascript: 1.0.0 {getting-started/codeql-extra-queries-javascript: not 1.0.0 {root: getting-started/codeql-extra-queries-javascript@1.0.0}}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [INCOMPATIBILITY] getting-started/codeql-extra-queries-javascript: * [*], codeql/javascript-all: not * [*] {dependency: getting-started/codeql-extra-queries-javascript@* [*] requires codeql/javascript-all@^2.1.0}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DECISION 1] getting-started/codeql-extra-queries-javascript: 1.0.0
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DERIVATION] codeql/javascript-all: * [*] {getting-started/codeql-extra-queries-javascript: * [*], codeql/javascript-all: not * [*] {dependency: getting-started/codeql-extra-queries-javascript@* [*] requires codeql/javascript-all@^2.1.0}}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/dataflow: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/dataflow@1.1.5}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/mad: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/mad@1.0.11}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/regex: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/regex@1.0.11}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/threat-models: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/threat-models@1.0.11}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/tutorial: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/tutorial@1.0.11}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/util: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/xml: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/xml@1.0.11}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/yaml: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/yaml@1.0.11}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DECISION 2] codeql/javascript-all: 2.1.0
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DERIVATION] codeql/yaml: * [*] {codeql/javascript-all: * [*], codeql/yaml: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/yaml@1.0.11}}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DERIVATION] codeql/xml: * [*] {codeql/javascript-all: * [*], codeql/xml: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/xml@1.0.11}}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DERIVATION] codeql/util: * [*] {codeql/javascript-all: * [*], codeql/util: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/util@1.0.11}}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DERIVATION] codeql/tutorial: * [*] {codeql/javascript-all: * [*], codeql/tutorial: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/tutorial@1.0.11}}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DERIVATION] codeql/threat-models: * [*] {codeql/javascript-all: * [*], codeql/threat-models: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/threat-models@1.0.11}}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DERIVATION] codeql/regex: * [*] {codeql/javascript-all: * [*], codeql/regex: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/regex@1.0.11}}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DERIVATION] codeql/mad: * [*] {codeql/javascript-all: * [*], codeql/mad: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/mad@1.0.11}}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DERIVATION] codeql/dataflow: * [*] {codeql/javascript-all: * [*], codeql/dataflow: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/dataflow@1.1.5}}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/ssa: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/ssa@1.0.11}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/typetracking: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/typetracking@1.0.11}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/util: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DECISION 3] codeql/dataflow: 1.1.5
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DERIVATION] codeql/typetracking: * [*] {codeql/dataflow: * [*], codeql/typetracking: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/typetracking@1.0.11}}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DERIVATION] codeql/ssa: * [*] {codeql/dataflow: * [*], codeql/ssa: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/ssa@1.0.11}}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/mad: * [*], codeql/dataflow: not * [*] {dependency: codeql/mad@* [*] requires codeql/dataflow@1.1.5}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/mad: * [*], codeql/util: not * [*] {dependency: codeql/mad@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DECISION 4] codeql/mad: 1.0.11
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/regex: * [*], codeql/util: not * [*] {dependency: codeql/regex@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DECISION 5] codeql/regex: 1.0.11
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/ssa: * [*], codeql/util: not * [*] {dependency: codeql/ssa@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DECISION 6] codeql/ssa: 1.0.11
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DECISION 7] codeql/threat-models: 1.0.11
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DECISION 8] codeql/tutorial: 1.0.11
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/typetracking: * [*], codeql/util: not * [*] {dependency: codeql/typetracking@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DECISION 9] codeql/typetracking: 1.0.11
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DECISION 10] codeql/util: 1.0.11
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [INCOMPATIBILITY] codeql/xml: * [*], codeql/util: not * [*] {dependency: codeql/xml@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DECISION 11] codeql/xml: 1.0.11
+[2024-11-12 23:16:52] [SPAMMY] resolve library-path> [DECISION 12] codeql/yaml: 1.0.11
+[2024-11-12 23:16:52] [DETAILS] resolve library-path> QL pack dependencies for /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript resolved OK.
+[2024-11-12 23:16:52] [DETAILS] resolve library-path> Found dbscheme through QL packs: /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmlecode.javascript.dbscheme.
+[2024-11-12 23:16:52] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript",
+                          "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0",
+                          "/Users/haze/Code/codeql/qlpacks/codeql/dataflow/1.1.5",
+                          "/Users/haze/Code/codeql/qlpacks/codeql/mad/1.0.11",
+                          "/Users/haze/Code/codeql/qlpacks/codeql/regex/1.0.11",
+                          "/Users/haze/Code/codeql/qlpacks/codeql/ssa/1.0.11",
+                          "/Users/haze/Code/codeql/qlpacks/codeql/threat-models/1.0.11",
+                          "/Users/haze/Code/codeql/qlpacks/codeql/tutorial/1.0.11",
+                          "/Users/haze/Code/codeql/qlpacks/codeql/typetracking/1.0.11",
+                          "/Users/haze/Code/codeql/qlpacks/codeql/util/1.0.11",
+                          "/Users/haze/Code/codeql/qlpacks/codeql/xml/1.0.11",
+                          "/Users/haze/Code/codeql/qlpacks/codeql/yaml/1.0.11"
+                        ],
+                        "dbscheme" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmlecode.javascript.dbscheme",
+                        "compilationCache" : [
+                          "/Users/haze/.codeql/compile-cache"
+                        ],
+                        "relativeName" : "getting-started/codeql-extra-queries-javascript/example.ql",
+                        "qlPackName" : "getting-started/codeql-extra-queries-javascript"
+                      }
+[2024-11-12 23:16:52] [PROGRESS] execute queries> Compiling query plan for /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/example.ql.
+[2024-11-12 23:16:52] [DETAILS] execute queries> Resolving imports for /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/example.ql.
+[2024-11-12 23:16:53] Resolved file set for /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/example.ql hashes to cfd667ed310307ae99395ea99c4c18ca73c6b164.
+[2024-11-12 23:16:53] [DETAILS] execute queries> Checking QL for /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/example.ql.
+[2024-11-12 23:16:53] Stale frontend caches are invalidated based on import graph reachability.
+[2024-11-12 23:16:53] ExternalModuleBindingPass ...
+[2024-11-12 23:16:55] ExternalModuleBindingPass time: 00:01.301
+[2024-11-12 23:16:55] CollectInstantiationsPass ...
+[2024-11-12 23:16:55] CollectInstantiationsPass time: 00:00.290
+[2024-11-12 23:16:55] Ql checks ...
+[2024-11-12 23:17:00] Ql checks time: 00:05.436
+[2024-11-12 23:17:04] Compilation pipeline
+[2024-11-12 23:17:04] Type Inference ...
+[2024-11-12 23:17:05] CSV_TYPE_HIERARCHY: Best number of iterations,Maximum number of runs,Number of BDD variables,Size of BDD for typefacts
+[2024-11-12 23:17:05] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2024-11-12 23:17:05] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2024-11-12 23:17:05] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2024-11-12 23:17:05] CSV_TYPE_HIERARCHY: 0,0,122,143
+[2024-11-12 23:17:05] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2024-11-12 23:17:05] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2024-11-12 23:17:05] CSV_TYPE_HIERARCHY: 0,0,671,2368
+[2024-11-12 23:17:05] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2024-11-12 23:17:05] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,937,60877
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,9,9
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,12,12
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,26,26
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,12,15
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,8,8
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,19,27
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,19,19
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,11,11
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,8,8
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,16,18
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,4,4
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,7,10
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,6,7
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,6,6
+[2024-11-12 23:17:06] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2024-11-12 23:17:08] Type Inference time: 00:03.600
+[2024-11-12 23:17:11] [DETAILS] execute queries> Optimizing /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/example.ql.
+[2024-11-12 23:17:11] Processing compilation pipeline
+[2024-11-12 23:17:11] Started compiling a query
+[2024-11-12 23:17:11] Initialising compiler...
+[2024-11-12 23:17:11] 	 ... compiler initialised
+[2024-11-12 23:17:11] About to start query optimisation
+[2024-11-12 23:17:11] Compilation cache miss for 6f64865fbb8032531973f23f98e5c949cfe4b708.
+[2024-11-12 23:17:12] Stored compiled program for 6f64865fbb8032531973f23f98e5c949cfe4b708.
+[2024-11-12 23:17:12] CSV_COMPILATION: NONE,MISC,RA_TRANSLATION,OPTIMISATIONS
+[2024-11-12 23:17:12] CSV_COMPILATION: 211,77,228,412
+[2024-11-12 23:17:12] [SPAMMY] execute queries> No database upgrade/downgrade needed for /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/example.ql
+[2024-11-12 23:17:12] [PROGRESS] execute queries> [1/1 comp 20.2s] Compiled /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/example.ql.
+[2024-11-12 23:17:12] [PROGRESS] execute queries> Starting evaluation of getting-started/codeql-extra-queries-javascript/example.ql.
+[2024-11-12 23:17:12] Starting evaluation of /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/example.ql
+[2024-11-12 23:17:12] (0s) Start query execution
+[2024-11-12 23:17:12] (0s) Beginning execution of /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/example.ql
+[2024-11-12 23:17:12] (0s)  >>> Created relation files/2@1ebcd3es with 121 rows and digest e5ecb198tsect7l1mmpmb6cfno6.
+[2024-11-12 23:17:12] (0s)  >>> Created relation folders/2@6d7e6b0i with 23 rows and digest 61980cn9bg1ivmlhpk2vbjin00c.
+[2024-11-12 23:17:12] (0s) Starting to evaluate predicate Files::Container.getAbsolutePath/0#dispred#051b95e1/2@db2709ka
+[2024-11-12 23:17:12] (0s)  >>> Created relation Files::Container.getAbsolutePath/0#dispred#051b95e1/2@db2709ka with 144 rows and digest 171681dv0akbom3l84nt7b3dqia.
+[2024-11-12 23:17:12] (0s) Starting to evaluate predicate Files::Impl::File.getURL/0#dispred#3f789d74/2@e8f010l4
+[2024-11-12 23:17:12] (0s)  >>> Created relation Files::Impl::File.getURL/0#dispred#3f789d74/2@e8f010l4 with 121 rows and digest b397d04g6q1p8250hs1b0vi7kd5.
+[2024-11-12 23:17:12] (0s) Starting to evaluate predicate Files::Impl::File.getURL/0#dispred#3f789d74_0#antijoin_rhs/1@3922ecsh
+[2024-11-12 23:17:12] (0s)  >>> Created relation Files::Impl::File.getURL/0#dispred#3f789d74_0#antijoin_rhs/1@3922ecsh with 121 rows and digest 84d5f3jj1tjjt7bhq9pbdve4ou6.
+[2024-11-12 23:17:12] (0s) Starting to evaluate predicate Files::Container.getAbsolutePath/0#dispred#051b95e1_0#antijoin_rhs/1@40c4eagi
+[2024-11-12 23:17:12] (0s)  >>> Created relation Files::Container.getAbsolutePath/0#dispred#051b95e1_0#antijoin_rhs/1@40c4eagi with 144 rows and digest 9420908mo48dsniaoapd2laqt0b.
+[2024-11-12 23:17:12] (0s) Starting to evaluate predicate #select#query/4@500d33sq
+[2024-11-12 23:17:12] (0s)  >>> Created relation #select#query/4@500d33sq with 121 rows and digest af3f7djf9113sgab267a0or577d.
+[2024-11-12 23:17:12] (0s) Query done
+[2024-11-12 23:17:12] (0s) Sequence stamp origin is -6117551229492545965
+[2024-11-12 23:17:12] (0s) Pausing evaluation to sync to disk at sequence stamp o+0
+[2024-11-12 23:17:12] (0s) Unpausing evaluation
+[2024-11-12 23:17:12] Evaluation of /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/example.ql produced BQRS results.
+[2024-11-12 23:17:12] [PROGRESS] execute queries> [1/1 eval 203ms] Evaluation done; writing results to getting-started/codeql-extra-queries-javascript/example.bqrs.
+[2024-11-12 23:17:12] [PROGRESS] execute queries> Shutting down query evaluator.
+[2024-11-12 23:17:12] Pausing evaluation to close the cache at sequence stamp o+1
+[2024-11-12 23:17:12] The disk cache is freshly trimmed; leave it be.
+[2024-11-12 23:17:12] Unpausing evaluation
+[2024-11-12 23:17:12] [PROGRESS] execute queries> Interpreting results.
+[2024-11-12 23:17:12] Running plumbing command: codeql database interpret-results --format=csv -o=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/js-results.csv --max-paths=4 --csv-location-format=line-column --print-diagnostics-summary --print-metrics-summary --qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/qlconfig.yml -- /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db example.ql
+[2024-11-12 23:17:12] Calling plumbing command: codeql resolve queries --qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/qlconfig.yml --format=json -- example.ql
+[2024-11-12 23:17:12] [PROGRESS] resolve queries> Recording pack reference getting-started/codeql-extra-queries-javascript at /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript.
+[2024-11-12 23:17:12] Plumbing command codeql resolve queries completed:
+                      [
+                        "/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/example.ql"
+                      ]
+[2024-11-12 23:17:12] Calling plumbing command: codeql resolve extensions --qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/qlconfig.yml example.ql
+[2024-11-12 23:17:12] Calling plumbing command: codeql resolve queries --qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/qlconfig.yml --allow-library-packs --format startingpacks -- example.ql
+[2024-11-12 23:17:12] [PROGRESS] resolve queries> Recording pack reference getting-started/codeql-extra-queries-javascript at /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript.
+[2024-11-12 23:17:12] Plumbing command codeql resolve queries completed:
+                      [
+                        "/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript"
+                      ]
+[2024-11-12 23:17:12] Calling plumbing command: codeql resolve extensions-by-pack --qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/qlconfig.yml -- /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] getting-started/codeql-extra-queries-javascript: not 1.0.0 {root: getting-started/codeql-extra-queries-javascript@1.0.0}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DERIVATION] getting-started/codeql-extra-queries-javascript: 1.0.0 {getting-started/codeql-extra-queries-javascript: not 1.0.0 {root: getting-started/codeql-extra-queries-javascript@1.0.0}}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] getting-started/codeql-extra-queries-javascript: * [*], codeql/javascript-all: not * [*] {dependency: getting-started/codeql-extra-queries-javascript@* [*] requires codeql/javascript-all@^2.1.0}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DECISION 1] getting-started/codeql-extra-queries-javascript: 1.0.0
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/javascript-all: * [*] {getting-started/codeql-extra-queries-javascript: * [*], codeql/javascript-all: not * [*] {dependency: getting-started/codeql-extra-queries-javascript@* [*] requires codeql/javascript-all@^2.1.0}}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/dataflow: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/dataflow@1.1.5}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/mad: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/mad@1.0.11}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/regex: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/regex@1.0.11}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/threat-models: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/threat-models@1.0.11}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/tutorial: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/tutorial@1.0.11}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/util: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/xml: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/xml@1.0.11}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/javascript-all: * [*], codeql/yaml: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/yaml@1.0.11}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DECISION 2] codeql/javascript-all: 2.1.0
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/yaml: * [*] {codeql/javascript-all: * [*], codeql/yaml: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/yaml@1.0.11}}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/xml: * [*] {codeql/javascript-all: * [*], codeql/xml: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/xml@1.0.11}}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/util: * [*] {codeql/javascript-all: * [*], codeql/util: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/util@1.0.11}}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/tutorial: * [*] {codeql/javascript-all: * [*], codeql/tutorial: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/tutorial@1.0.11}}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/threat-models: * [*] {codeql/javascript-all: * [*], codeql/threat-models: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/threat-models@1.0.11}}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/regex: * [*] {codeql/javascript-all: * [*], codeql/regex: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/regex@1.0.11}}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/mad: * [*] {codeql/javascript-all: * [*], codeql/mad: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/mad@1.0.11}}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/dataflow: * [*] {codeql/javascript-all: * [*], codeql/dataflow: not * [*] {dependency: codeql/javascript-all@* [*] requires codeql/dataflow@1.1.5}}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/ssa: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/ssa@1.0.11}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/typetracking: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/typetracking@1.0.11}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/dataflow: * [*], codeql/util: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DECISION 3] codeql/dataflow: 1.1.5
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/typetracking: * [*] {codeql/dataflow: * [*], codeql/typetracking: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/typetracking@1.0.11}}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DERIVATION] codeql/ssa: * [*] {codeql/dataflow: * [*], codeql/ssa: not * [*] {dependency: codeql/dataflow@* [*] requires codeql/ssa@1.0.11}}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/mad: * [*], codeql/dataflow: not * [*] {dependency: codeql/mad@* [*] requires codeql/dataflow@1.1.5}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/mad: * [*], codeql/util: not * [*] {dependency: codeql/mad@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DECISION 4] codeql/mad: 1.0.11
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/regex: * [*], codeql/util: not * [*] {dependency: codeql/regex@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DECISION 5] codeql/regex: 1.0.11
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/ssa: * [*], codeql/util: not * [*] {dependency: codeql/ssa@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DECISION 6] codeql/ssa: 1.0.11
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DECISION 7] codeql/threat-models: 1.0.11
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DECISION 8] codeql/tutorial: 1.0.11
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/typetracking: * [*], codeql/util: not * [*] {dependency: codeql/typetracking@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DECISION 9] codeql/typetracking: 1.0.11
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DECISION 10] codeql/util: 1.0.11
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [INCOMPATIBILITY] codeql/xml: * [*], codeql/util: not * [*] {dependency: codeql/xml@* [*] requires codeql/util@1.0.11}
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DECISION 11] codeql/xml: 1.0.11
+[2024-11-12 23:17:12] [SPAMMY] resolve extensions-by-pack> [DECISION 12] codeql/yaml: 1.0.11
+[2024-11-12 23:17:13] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/ext/default-threat-models-fixup.model.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/threat-models:threatModelConfiguration: 1 tuples.
+[2024-11-12 23:17:13] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/NoSQL.model.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeModel: 4 tuples.
+[2024-11-12 23:17:13] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/NodeJSLib.model.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:sourceModel: 5 tuples.
+[2024-11-12 23:17:13] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/SQL.model.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:sourceModel: 5 tuples.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:sinkModel: 4 tuples.
+[2024-11-12 23:17:13] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:sourceModel: 0 tuples.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:sinkModel: 0 tuples.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:summaryModel: 0 tuples.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:neutralModel: 0 tuples.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeModel: 0 tuples.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeVariableModel: 0 tuples.
+[2024-11-12 23:17:13] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/helmet/Helmet.Required.Setting.model.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:requiredHelmetSecuritySetting: 2 tuples.
+[2024-11-12 23:17:13] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/minimongo/model.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeModel: 75 tuples.
+[2024-11-12 23:17:13] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mongodb/model.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:sinkModel: 26 tuples.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeModel: 611 tuples.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:summaryModel: 32 tuples.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeVariableModel: 102 tuples.
+[2024-11-12 23:17:13] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mssql/model.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeModel: 34 tuples.
+[2024-11-12 23:17:13] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mysql/model.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeModel: 57 tuples.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:summaryModel: 3 tuples.
+[2024-11-12 23:17:13] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/pg/model.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeModel: 65 tuples.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:summaryModel: 5 tuples.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeVariableModel: 23 tuples.
+[2024-11-12 23:17:13] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sequelize/model.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:sinkModel: 7 tuples.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeModel: 248 tuples.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:summaryModel: 5 tuples.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeVariableModel: 2 tuples.
+[2024-11-12 23:17:13] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/spanner/model.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeModel: 174 tuples.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeVariableModel: 5 tuples.
+[2024-11-12 23:17:13] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sqlite3/model.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:typeModel: 15 tuples.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:summaryModel: 3 tuples.
+[2024-11-12 23:17:13] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/security/domains/IntegrityCheckingRequired/integrity_checking_required.model.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:isCdnDomainWithCheckingRequired: 3 tuples.
+[2024-11-12 23:17:13] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/security/domains/compromised/compromised_domains.model.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:isUntrustedDomain: 1 tuples.
+[2024-11-12 23:17:13] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/security/domains/untrusted/untrusted_domains.model.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/javascript-all:isUntrustedDomain: 6 tuples.
+[2024-11-12 23:17:13] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/threat-models/1.0.11/ext/supported-threat-models.model.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/threat-models:threatModelConfiguration: 1 tuples.
+[2024-11-12 23:17:13] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/threat-models/1.0.11/ext/threat-model-grouping.model.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/threat-models:threatModelGrouping: 14 tuples.
+[2024-11-12 23:17:13] [PROGRESS] resolve extensions-by-pack> Loading data extensions in /Users/haze/Code/codeql/qlpacks/codeql/util/1.0.11/ext/default-alert-filter.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve extensions-by-pack>   Found extension targeting codeql/util:restrictAlertsTo: 0 tuples.
+[2024-11-12 23:17:13] Plumbing command codeql resolve extensions-by-pack completed:
+                      {
+                        "models" : [ ],
+                        "data" : {
+                          "/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript" : [
+                            {
+                              "predicate" : "threatModelConfiguration",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/ext/default-threat-models-fixup.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 0,
+                              "rowCount" : 1,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/NoSQL.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1,
+                              "rowCount" : 4,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "sourceModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/NodeJSLib.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 5,
+                              "rowCount" : 5,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "sourceModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/SQL.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 10,
+                              "rowCount" : 5,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "sinkModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/SQL.model.yml",
+                              "index" : 1,
+                              "firstRowId" : 15,
+                              "rowCount" : 4,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "sourceModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "sinkModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 1,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 2,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "neutralModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 3,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 4,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 5,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "requiredHelmetSecuritySetting",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/helmet/Helmet.Required.Setting.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 19,
+                              "rowCount" : 2,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/minimongo/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 21,
+                              "rowCount" : 75,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "sinkModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mongodb/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 96,
+                              "rowCount" : 26,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mongodb/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 122,
+                              "rowCount" : 611,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mongodb/model.yml",
+                              "index" : 2,
+                              "firstRowId" : 733,
+                              "rowCount" : 32,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mongodb/model.yml",
+                              "index" : 3,
+                              "firstRowId" : 765,
+                              "rowCount" : 102,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mssql/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 867,
+                              "rowCount" : 34,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mysql/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 901,
+                              "rowCount" : 57,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mysql/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 958,
+                              "rowCount" : 3,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/pg/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 961,
+                              "rowCount" : 65,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/pg/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 1026,
+                              "rowCount" : 5,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/pg/model.yml",
+                              "index" : 2,
+                              "firstRowId" : 1031,
+                              "rowCount" : 23,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "sinkModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sequelize/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1054,
+                              "rowCount" : 7,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sequelize/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 1061,
+                              "rowCount" : 248,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sequelize/model.yml",
+                              "index" : 2,
+                              "firstRowId" : 1309,
+                              "rowCount" : 5,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sequelize/model.yml",
+                              "index" : 3,
+                              "firstRowId" : 1314,
+                              "rowCount" : 2,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/spanner/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1316,
+                              "rowCount" : 174,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/spanner/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 1490,
+                              "rowCount" : 5,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sqlite3/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1495,
+                              "rowCount" : 15,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sqlite3/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 1510,
+                              "rowCount" : 3,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "isCdnDomainWithCheckingRequired",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/security/domains/IntegrityCheckingRequired/integrity_checking_required.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1513,
+                              "rowCount" : 3,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "isUntrustedDomain",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/security/domains/compromised/compromised_domains.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1516,
+                              "rowCount" : 1,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "isUntrustedDomain",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/security/domains/untrusted/untrusted_domains.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1517,
+                              "rowCount" : 6,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "threatModelConfiguration",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/threat-models/1.0.11/ext/supported-threat-models.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1523,
+                              "rowCount" : 1,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "threatModelGrouping",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/threat-models/1.0.11/ext/threat-model-grouping.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1524,
+                              "rowCount" : 14,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "restrictAlertsTo",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/util/1.0.11/ext/default-alert-filter.yml",
+                              "index" : 0,
+                              "firstRowId" : 1538,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false
+                            }
+                          ]
+                        },
+                        "threatModels" : {
+                          "/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript" : {
+                            "extensions" : [
+                              {
+                                "data" : [ ],
+                                "addsTo" : {
+                                  "extensible" : "threatModelConfiguration",
+                                  "packName" : "codeql/threat-models"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "extensionPacks" : [ ]
+                      }
+[2024-11-12 23:17:13] Plumbing command codeql resolve extensions completed:
+                      {
+                        "models" : [ ],
+                        "data" : {
+                          "/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript" : [
+                            {
+                              "predicate" : "threatModelConfiguration",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/ext/default-threat-models-fixup.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 0,
+                              "rowCount" : 1,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/NoSQL.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1,
+                              "rowCount" : 4,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "sourceModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/NodeJSLib.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 5,
+                              "rowCount" : 5,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "sourceModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/SQL.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 10,
+                              "rowCount" : 5,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "sinkModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/SQL.model.yml",
+                              "index" : 1,
+                              "firstRowId" : 15,
+                              "rowCount" : 4,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "sourceModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "sinkModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 1,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 2,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "neutralModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 3,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 4,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/data/internal/empty.model.yml",
+                              "index" : 5,
+                              "firstRowId" : 19,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "requiredHelmetSecuritySetting",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/helmet/Helmet.Required.Setting.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 19,
+                              "rowCount" : 2,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/minimongo/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 21,
+                              "rowCount" : 75,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "sinkModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mongodb/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 96,
+                              "rowCount" : 26,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mongodb/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 122,
+                              "rowCount" : 611,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mongodb/model.yml",
+                              "index" : 2,
+                              "firstRowId" : 733,
+                              "rowCount" : 32,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mongodb/model.yml",
+                              "index" : 3,
+                              "firstRowId" : 765,
+                              "rowCount" : 102,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mssql/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 867,
+                              "rowCount" : 34,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mysql/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 901,
+                              "rowCount" : 57,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/mysql/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 958,
+                              "rowCount" : 3,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/pg/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 961,
+                              "rowCount" : 65,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/pg/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 1026,
+                              "rowCount" : 5,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/pg/model.yml",
+                              "index" : 2,
+                              "firstRowId" : 1031,
+                              "rowCount" : 23,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "sinkModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sequelize/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1054,
+                              "rowCount" : 7,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sequelize/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 1061,
+                              "rowCount" : 248,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sequelize/model.yml",
+                              "index" : 2,
+                              "firstRowId" : 1309,
+                              "rowCount" : 5,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sequelize/model.yml",
+                              "index" : 3,
+                              "firstRowId" : 1314,
+                              "rowCount" : 2,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/spanner/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1316,
+                              "rowCount" : 174,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeVariableModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/spanner/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 1490,
+                              "rowCount" : 5,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "typeModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sqlite3/model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1495,
+                              "rowCount" : 15,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "summaryModel",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/frameworks/sqlite3/model.yml",
+                              "index" : 1,
+                              "firstRowId" : 1510,
+                              "rowCount" : 3,
+                              "predicateHasOrigin" : true
+                            },
+                            {
+                              "predicate" : "isCdnDomainWithCheckingRequired",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/security/domains/IntegrityCheckingRequired/integrity_checking_required.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1513,
+                              "rowCount" : 3,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "isUntrustedDomain",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/security/domains/compromised/compromised_domains.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1516,
+                              "rowCount" : 1,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "isUntrustedDomain",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/javascript-all/2.1.0/semmle/javascript/security/domains/untrusted/untrusted_domains.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1517,
+                              "rowCount" : 6,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "threatModelConfiguration",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/threat-models/1.0.11/ext/supported-threat-models.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1523,
+                              "rowCount" : 1,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "threatModelGrouping",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/threat-models/1.0.11/ext/threat-model-grouping.model.yml",
+                              "index" : 0,
+                              "firstRowId" : 1524,
+                              "rowCount" : 14,
+                              "predicateHasOrigin" : false
+                            },
+                            {
+                              "predicate" : "restrictAlertsTo",
+                              "file" : "/Users/haze/Code/codeql/qlpacks/codeql/util/1.0.11/ext/default-alert-filter.yml",
+                              "index" : 0,
+                              "firstRowId" : 1538,
+                              "rowCount" : 0,
+                              "predicateHasOrigin" : false
+                            }
+                          ]
+                        },
+                        "threatModels" : {
+                          "/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript" : {
+                            "extensions" : [
+                              {
+                                "data" : [ ],
+                                "addsTo" : {
+                                  "extensible" : "threatModelConfiguration",
+                                  "packName" : "codeql/threat-models"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "extensionPacks" : [ ]
+                      }
+[2024-11-12 23:17:13] [PROGRESS] database interpret-results> Interpreting /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/example.ql...
+[2024-11-12 23:17:13] Calling plumbing command: codeql resolve library-path --query=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/example.ql --full-library-path=none --dbscheme=none --format=json
+[2024-11-12 23:17:13] [DETAILS] resolve library-path> Resolving query at normalized path /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/example.ql.
+[2024-11-12 23:17:13] [DETAILS] resolve library-path> Found enclosing pack 'getting-started/codeql-extra-queries-javascript' at /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript.
+[2024-11-12 23:17:13] [DETAILS] resolve library-path> Adding compilation cache at /Users/haze/.codeql/compile-cache.
+[2024-11-12 23:17:13] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/none
+[2024-11-12 23:17:13] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2024-11-12 23:17:13] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/none"
+                        ],
+                        "dbscheme" : "/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/none",
+                        "compilationCache" : [
+                          "/Users/haze/.codeql/compile-cache"
+                        ],
+                        "relativeName" : "getting-started/codeql-extra-queries-javascript/example.ql",
+                        "qlPackName" : "getting-started/codeql-extra-queries-javascript"
+                      }
+[2024-11-12 23:17:13] [DETAILS] database interpret-results>  ... found results file at /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db/results/getting-started/codeql-extra-queries-javascript/example.bqrs.
+[2024-11-12 23:17:13] [DETAILS] database interpret-results> Interpreted problem query "Hello world" (javascript/example/hello-world) at path /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db/results/getting-started/codeql-extra-queries-javascript/example.bqrs.
+[2024-11-12 23:17:13] [DETAILS] database interpret-results> Interpreting file coverage baseline information
+[2024-11-12 23:17:13] [DETAILS] database interpret-results> Finished interpreting file coverage baseline information.
+[2024-11-12 23:17:13] [DETAILS] database interpret-results> Interpreting diagnostic messages...
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Looking for diagnostics in /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db/diagnostic...
+[2024-11-12 23:17:13] [SPAMMIER] database interpret-results> Found diagnostics file /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db/diagnostic/cli-diagnostics-add-20241112T100906.062Z.json.
+[2024-11-12 23:17:13] [SPAMMIER] database interpret-results> Found diagnostics file /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db/diagnostic/cli-diagnostics-add-20241112T100924.480Z.json.
+[2024-11-12 23:17:13] [SPAMMIER] database interpret-results> Found diagnostics file /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db/diagnostic/cli-diagnostics-add-20241112T040428.342Z.json.
+[2024-11-12 23:17:13] [SPAMMIER] database interpret-results> Found diagnostics file /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db/diagnostic/cli-diagnostics-add-20241112T040358.619Z.json.
+[2024-11-12 23:17:13] [SPAMMIER] database interpret-results> Found diagnostics file /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db/diagnostic/cli-diagnostics-add-20241112T040435.944Z.json.
+[2024-11-12 23:17:13] [SPAMMIER] database interpret-results> Found diagnostics file /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db/diagnostic/cli-diagnostics-add-20241112T101647.198Z.json.
+[2024-11-12 23:17:13] [DETAILS] database interpret-results> Found 1 raw diagnostic messages.
+[2024-11-12 23:17:13] [DETAILS] database interpret-results> Processed diagnostic messages (removed 0 due to limits, created 0 summary diagnostics for status page).
+[2024-11-12 23:17:13] [DETAILS] database interpret-results> Interpreted diagnostic messages (78ms).
+[2024-11-12 23:17:13] Calling plumbing command: codeql resolve languages --format=json
+[2024-11-12 23:17:13] [DETAILS] resolve languages> Scanning for [codeql-extractor.yml] from /Users/haze/Code/codeql/.codeqlmanifest.json
+[2024-11-12 23:17:13] [DETAILS] resolve languages> Parsing /Users/haze/Code/codeql/go/codeql-extractor.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve languages> Parsing /Users/haze/Code/codeql/python/codeql-extractor.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve languages> Parsing /Users/haze/Code/codeql/java/codeql-extractor.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve languages> Parsing /Users/haze/Code/codeql/html/codeql-extractor.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve languages> Parsing /Users/haze/Code/codeql/xml/codeql-extractor.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve languages> Parsing /Users/haze/Code/codeql/properties/codeql-extractor.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve languages> Parsing /Users/haze/Code/codeql/cpp/codeql-extractor.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve languages> Parsing /Users/haze/Code/codeql/swift/codeql-extractor.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve languages> Parsing /Users/haze/Code/codeql/csv/codeql-extractor.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve languages> Parsing /Users/haze/Code/codeql/yaml/codeql-extractor.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve languages> Parsing /Users/haze/Code/codeql/csharp/codeql-extractor.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve languages> Parsing /Users/haze/Code/codeql/javascript/codeql-extractor.yml.
+[2024-11-12 23:17:13] [DETAILS] resolve languages> Parsing /Users/haze/Code/codeql/ruby/codeql-extractor.yml.
+[2024-11-12 23:17:13] Plumbing command codeql resolve languages completed:
+                      {
+                        "aliases" : {
+                          "c" : "cpp",
+                          "c++" : "cpp",
+                          "c-c++" : "cpp",
+                          "c-cpp" : "cpp",
+                          "c#" : "csharp",
+                          "java-kotlin" : "java",
+                          "kotlin" : "java",
+                          "javascript-typescript" : "javascript",
+                          "typescript" : "javascript"
+                        },
+                        "extractors" : {
+                          "go" : [
+                            {
+                              "extractor_root" : "/Users/haze/Code/codeql/go",
+                              "extractor_options" : {
+                                "extract_tests" : {
+                                  "title" : "Whether to include Go test files in the CodeQL database.",
+                                  "description" : "A value indicating whether Go test files should be included in the CodeQL database. The default is 'false'.\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                },
+                                "extract_vendor_dirs" : {
+                                  "title" : "Whether to include Go vendor directories in the CodeQL database.",
+                                  "description" : "A value indicating whether Go vendor directories should be included in the CodeQL database. The default is 'false'.\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                }
+                              }
+                            }
+                          ],
+                          "python" : [
+                            {
+                              "extractor_root" : "/Users/haze/Code/codeql/python",
+                              "extractor_options" : {
+                                "logging" : {
+                                  "title" : "Options pertaining to logging.",
+                                  "description" : "Options pertaining to logging.",
+                                  "type" : "object",
+                                  "properties" : {
+                                    "verbosity" : {
+                                      "title" : "Python extractor logging verbosity level.",
+                                      "description" : "Controls the level of verbosity of the CodeQL Python extractor.\nThe supported levels are (in order of increasing verbosity):\n\n  - off\n  - errors\n  - warnings\n  - info or progress\n  - debug or progress+\n  - trace or progress++\n  - progress+++\n",
+                                      "type" : "string",
+                                      "pattern" : "^(off|errors|warnings|(info|progress)|(debug|progress\\+)|(trace|progress\\+\\+)|progress\\+\\+\\+)$"
+                                    }
+                                  }
+                                },
+                                "python_executable_name" : {
+                                  "title" : "Controls the name of the Python executable used by the Python extractor.",
+                                  "description" : "The Python extractor uses platform-dependent heuristics to determine the name of the Python executable to use. Specifying a value for this option overrides the name of the Python executable used by the extractor. Accepted values are py, python and python3. Use this setting with caution, the Python extractor requires Python 3 to run.\n",
+                                  "type" : "string",
+                                  "pattern" : "^(py|python|python3)$"
+                                }
+                              }
+                            }
+                          ],
+                          "java" : [
+                            {
+                              "extractor_root" : "/Users/haze/Code/codeql/java",
+                              "extractor_options" : {
+                                "exclude" : {
+                                  "title" : "A glob excluding files from analysis.",
+                                  "description" : "A glob indicating what files to exclude from the analysis.\n",
+                                  "type" : "string"
+                                },
+                                "add_prefer_source" : {
+                                  "title" : "Whether to always prefer source files over class files.",
+                                  "description" : "A value indicating whether source files should be preferred over class files. If set to 'true', the extraction adds '-Xprefer:source' to the javac command line. If set to 'false', the extraction uses the default javac behavior ('-Xprefer:newer'). The default is 'true'.\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                },
+                                "buildless" : {
+                                  "title" : "Whether to use buildless (standalone) extraction (experimental).",
+                                  "description" : "A value indicating, which type of extraction the autobuilder should perform. If 'true', then the standalone extractor will be used, otherwise tracing extraction will be performed. The default is 'false'. Note that buildless extraction will generally yield less accurate analysis results, and should only be used in cases where it is not possible to build the code (for example if it uses inaccessible dependencies).\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                }
+                              }
+                            }
+                          ],
+                          "html" : [
+                            {
+                              "extractor_root" : "/Users/haze/Code/codeql/html"
+                            }
+                          ],
+                          "xml" : [
+                            {
+                              "extractor_root" : "/Users/haze/Code/codeql/xml"
+                            }
+                          ],
+                          "properties" : [
+                            {
+                              "extractor_root" : "/Users/haze/Code/codeql/properties"
+                            }
+                          ],
+                          "cpp" : [
+                            {
+                              "extractor_root" : "/Users/haze/Code/codeql/cpp",
+                              "extractor_options" : {
+                                "scale_timeouts" : {
+                                  "title" : "Value to scale compiler introspection timeouts with",
+                                  "description" : "The extractor attempts to determine what compiler the source code being extracted is compiled with. To this end the extractor makes additional calls to the compiler, some of which are expected to return within a certain fixed time (either 10s or 15s). On some systems that are under high load this time might be too short, and can be scaled up using this option.\n",
+                                  "type" : "string",
+                                  "pattern" : "[0-9]+"
+                                },
+                                "log_verbosity" : {
+                                  "title" : "Verbosity of the extractor logging",
+                                  "description" : "Set the verbosity of the extractor logging to 'quiet' (0), 'normal' (1), 'chatty' (2), or 'noisy' (3). The default is 'normal'.\n",
+                                  "type" : "string",
+                                  "pattern" : "[0-3]"
+                                }
+                              }
+                            }
+                          ],
+                          "swift" : [
+                            {
+                              "extractor_root" : "/Users/haze/Code/codeql/swift"
+                            }
+                          ],
+                          "csv" : [
+                            {
+                              "extractor_root" : "/Users/haze/Code/codeql/csv"
+                            }
+                          ],
+                          "yaml" : [
+                            {
+                              "extractor_root" : "/Users/haze/Code/codeql/yaml"
+                            }
+                          ],
+                          "csharp" : [
+                            {
+                              "extractor_root" : "/Users/haze/Code/codeql/csharp",
+                              "extractor_options" : {
+                                "trap" : {
+                                  "title" : "Options pertaining to TRAP.",
+                                  "description" : "Options pertaining to TRAP.",
+                                  "type" : "object",
+                                  "properties" : {
+                                    "compression" : {
+                                      "title" : "Controls compression for the TRAP files written by the extractor.",
+                                      "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'brotli' (the default, to write brotli-compressed TRAP), 'gzip', and 'none' (to write uncompressed TRAP).\n",
+                                      "type" : "string",
+                                      "pattern" : "^(none|gzip|brotli)$"
+                                    }
+                                  }
+                                },
+                                "buildless" : {
+                                  "title" : "DEPRECATED - Whether to use buildless (standalone) extraction.",
+                                  "description" : "DEPRECATED: Use `--build-mode none` instead.\nA value indicating, which type of extraction the autobuilder should perform. If 'true', then the standalone extractor will be used, otherwise tracing extraction will be performed. The default is 'false'. Note that buildless extraction will generally yield less accurate analysis results, and should only be used in cases where it is not possible to build the code (for example if it uses inaccessible dependencies).\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                },
+                                "logging" : {
+                                  "title" : "Options pertaining to logging.",
+                                  "description" : "Options pertaining to logging.",
+                                  "type" : "object",
+                                  "properties" : {
+                                    "verbosity" : {
+                                      "title" : "Extractor logging verbosity level.",
+                                      "description" : "Controls the level of verbosity of the extractor. The supported levels are (in order of increasing verbosity):\n  - off\n  - errors\n  - warnings\n  - info or progress\n  - debug or progress+\n  - trace or progress++\n  - progress+++\n",
+                                      "type" : "string",
+                                      "pattern" : "^(off|errors|warnings|(info|progress)|(debug|progress\\+)|(trace|progress\\+\\+)|progress\\+\\+\\+)$"
+                                    }
+                                  }
+                                },
+                                "binlog" : {
+                                  "title" : "Binlog",
+                                  "description" : "[EXPERIMENTAL] The value is a path to the MsBuild binary log file that should be extracted. This option only works when `--build-mode none` is also specified.\n",
+                                  "type" : "string"
+                                }
+                              }
+                            }
+                          ],
+                          "javascript" : [
+                            {
+                              "extractor_root" : "/Users/haze/Code/codeql/javascript",
+                              "extractor_options" : {
+                                "skip_types" : {
+                                  "title" : "Skip type extraction for TypeScript",
+                                  "description" : "Whether to skip the extraction of types in a TypeScript application",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                }
+                              }
+                            }
+                          ],
+                          "ruby" : [
+                            {
+                              "extractor_root" : "/Users/haze/Code/codeql/ruby",
+                              "extractor_options" : {
+                                "trap" : {
+                                  "title" : "Options pertaining to TRAP.",
+                                  "description" : "Options pertaining to TRAP.",
+                                  "type" : "object",
+                                  "properties" : {
+                                    "compression" : {
+                                      "title" : "Controls compression for the TRAP files written by the extractor.",
+                                      "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'gzip' (the default, to write gzip-compressed TRAP) and 'none' (to write uncompressed TRAP).\n",
+                                      "type" : "string",
+                                      "pattern" : "^(none|gzip)$"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+[2024-11-12 23:17:13] [SPAMMIER] database interpret-results> Loaded the following extractors: Go, Python, Java/Kotlin, HTML, XML, Java Properties Files, C/C++, Swift, CSV, YAML, C#, JavaScript/TypeScript, Ruby
+[2024-11-12 23:17:13] [PROGRESS] database interpret-results> Exporting results to CSV...
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/es/es2016.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/es/es2017.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/es/es3.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/es/es5.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/es/es6.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/es/es6_collections.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/es/intl.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/es/proxy.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/lib/bdd.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/lib/jquery-3.2.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/lib/should.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/lib/vows.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/assert.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/assert_legacy.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/buffer.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/child_process.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/cluster.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/console.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/constants.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/crypto.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/dgram.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/dns.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/domain.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/events.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/fs.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/globals.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/http.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/https.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/module.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/net.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/os.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/path.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/process.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/punycode.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/querystring.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/readline.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/repl.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/stream.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/string_decoder.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/sys.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/timers.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/tls.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/tty.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/url.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/util.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/v8.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/vm.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/nodejs/zlib.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/vm/jsshell.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/vm/rhino.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/vm/spidermonkey.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/vm/v8.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/chrome.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/fetchapi.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/fileapi.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/flash.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/gecko_css.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/gecko_dom.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/gecko_event.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/gecko_ext.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/gecko_xml.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/html5.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/ie_css.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/ie_dom.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/ie_event.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/ie_vml.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/intl.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/iphone.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/mediasource.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/page_visibility.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/streamsapi.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/url.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_anim_timing.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_batterystatus.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_css.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_css3d.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_device_sensor_event.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_dom1.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_dom2.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_dom3.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_dom4.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_elementtraversal.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_encoding.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_event.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_event3.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_gamepad.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_geolocation.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_indexeddb.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_midi.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_navigation_timing.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_permissions.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_pointer_events.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_range.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_requestidlecallback.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_rtc.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_screen_orientation.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_selectors.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_serviceworker.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_touch_event.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_webcrypto.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/w3c_xml.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/webgl.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/webkit_css.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/webkit_dom.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/webkit_event.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/webkit_notifications.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/webkit_usercontent.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/webstorage.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/whatwg_encoding.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping location 'file:///Users/haze/Code/codeql/javascript/tools/data/externs/web/window.js:0:0:0:0' since it is outside the source archive.
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping non-rule analysis js/baseline/expected-extracted-files
+[2024-11-12 23:17:13] [SPAMMY] database interpret-results> Skipping non-rule analysis cli/sip-enablement
+[2024-11-12 23:17:13] [PROGRESS] database interpret-results> Exported results to CSV (28ms).
+[2024-11-12 23:17:13] Plumbing command codeql database interpret-results completed.
+[2024-11-12 23:17:13] Exiting with code 0

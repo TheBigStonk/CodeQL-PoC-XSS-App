@@ -1,0 +1,13 @@
+[2024-11-12 23:38:06] This is codeql database analyze ../codeql-db --format=csv --output=custom-js-results.csv --rerun DetectDangerouslySetInnerHTML.ql
+[2024-11-12 23:38:06] Log file was started late.
+[2024-11-12 23:38:06] [PROGRESS] database analyze> Running queries.
+[2024-11-12 23:38:06] Running plumbing command: codeql database run-queries --evaluator-log-level=5 --warnings=show --dynamic-join-order-mode=none --qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/qlconfig.yml --rerun --interpret-passthrough=null,--format=csv,-o=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/custom-js-results.csv,--max-paths=4,--csv-location-format=line-column,--print-diagnostics-summary,--print-metrics-summary,--qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/qlconfig.yml,--,/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db,DetectDangerouslySetInnerHTML.ql -- /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db DetectDangerouslySetInnerHTML.ql
+[2024-11-12 23:38:06] Calling plumbing command: codeql resolve ram --dataset=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db/db-javascript --format=json
+[2024-11-12 23:38:06] [PROGRESS] resolve ram> Stringpool size measured as 5013930
+[2024-11-12 23:38:06] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx1402M"
+                      ]
+[2024-11-12 23:38:06] Chaining via /var/folders/d_/ln6psd1j5j93cstnw_rzz8rh0000gn/T/codeql.XXXXXXXX.7OXMtmAv to plumbing: execute queries -J-Xmx1402M --verbosity=progress --logdir=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db/log --evaluator-log-level=5 --warnings=show --dynamic-join-order-mode=none --qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/qlconfig.yml --rerun --interpret-passthrough=null,--format=csv,-o=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/custom-js-results.csv,--max-paths=4,--csv-location-format=line-column,--print-diagnostics-summary,--print-metrics-summary,--qlconfig-file=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-custom-queries-javascript/qlconfig.yml,--,/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db,DetectDangerouslySetInnerHTML.ql --output=/Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db/results -- /Users/haze/Code/CodeQL-PoC-XSS-App/codeql-db/db-javascript DetectDangerouslySetInnerHTML.ql
+[2024-11-12 23:38:06] Plumbing command codeql database run-queries completed with status 70.
+[2024-11-12 23:38:06] Exiting with code 70
